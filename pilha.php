@@ -25,6 +25,11 @@ function funcao2()
     echo 'Saindo da função 2' . PHP_EOL;
 }
 
+// Inicia o programa
 echo 'Iniciando o programa principal' . PHP_EOL;
+
+// Em seguida inicia a função 1
 funcao1();
+
+// Após terminar a função 1, inicia a função 2 e por fim avisa que terminou.
 echo 'Finalizando o programa principal' . PHP_EOL;

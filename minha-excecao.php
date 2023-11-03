@@ -2,14 +2,14 @@
 
 class MinhaExcecao extends DomainException
 {
-    public function exibeVinicius()
+    public function exibeMeuNome()
     {
-        echo "Vinicius";
+        echo "Vitor Reichert Goncalves";
     }
 }
 
 try {
     throw new MinhaExcecao();
 } catch (MinhaExcecao $e) {
-    $e->exibeVinicius();
+    $e->exibeMeuNome();
 }

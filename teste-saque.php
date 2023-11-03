@@ -21,4 +21,20 @@ try {
     echo $exception->getMessage();
 }
 
+$conta = new ContaCorrente(
+    new Titular(
+        new CPF('121.460.420-19'),
+        'Vitor Reichert Gonçalves',
+        new Endereco('Palhoça', 'bairro Teste', 'Rua tal', '18')
+    )
+);
+$conta->deposita(3000);
+
+try {
+    $conta->saca(2500);
+} catch (SaldoInsuficienteException $exception) {
+    echo "Você, não tem saldo para realizar este saque." . PHP_EOL;
+    echo $exception->getMessage();
+}
+
 echo $conta->recuperaSaldo();
